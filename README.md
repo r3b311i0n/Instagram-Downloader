@@ -6,7 +6,7 @@ Simple Instagram download made using Python.
 * lxml
 * requests
 
-#### Download
+#### Usage:
 
 ```
 python igram.py url1 ur2 url3...
