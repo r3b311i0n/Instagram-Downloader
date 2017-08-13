@@ -3,6 +3,7 @@ import requests
 import sys
 from lxml import html
 
+
 # todo: Try threading for downloads
 
 
@@ -20,6 +21,7 @@ class Download:
             with open(str(re.sub(r'^(\w|\W)*/', '', self.link)), 'wb') as f:
                 for chunk in r.iter_content(1024):
                     f.write(chunk)
+
 
 # Iterate over input arguments
 for index in range(len(sys.argv) - 1):

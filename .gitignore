@@ -44,3 +44,6 @@ venv/
 # Spyder project settings
 # Rope project settings
 # Any custom downloads
+
+# Custom downloads
+*.jpg
