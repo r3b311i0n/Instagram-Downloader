@@ -1,5 +1,5 @@
 # Instagram-Downloader
-Simple Instagram download made using Python.
+Simple Instagram downloader made using Python.
 
 #### Requirements:
 
