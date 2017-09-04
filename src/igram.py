@@ -11,9 +11,13 @@ class Download:
     def __init__(self, url):
         page = requests.get(url)
         tree = html.fromstring(page.content)
-        self.link = tree.xpath('//meta[@property="og:image"]/@content')[0]
-        print(self.link)
-        self.fetch()
+        try:
+            self.link = tree.xpath('//meta[@property="og:video"]/@content')[0]
+        except IndexError:
+            self.link = tree.xpath('//meta[@property="og:image"]/@content')[0]
+        finally:
+            print(self.link)
+            self.fetch()
 
     def fetch(self):
         r = requests.get(self.link, stream=True)
