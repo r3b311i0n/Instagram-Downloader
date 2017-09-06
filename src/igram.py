@@ -18,10 +18,14 @@ class Download:
                 shared_data['entry_data']['PostPage'][0]['graphql']['shortcode_media']['edge_sidecar_to_children'][
                     'edges']
 
-            for display_url in media_array:
-                link = display_url['node']['display_url']
-                print(link)
-                self.fetch(link)
+            for resource_link in media_array:
+                try:
+                    link = resource_link['node']['video_url']
+                except KeyError:
+                    link = resource_link['node']['display_url']
+                finally:
+                    print(link)
+                    self.fetch(link)
 
         except KeyError:
             try:
