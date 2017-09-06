@@ -9,5 +9,5 @@ Simple Instagram downloader made using Python.
 #### Usage:
 
 ```
-python igram.py url1 ur2 url3...
+python igram.py url1 url2 url3...
 ```
